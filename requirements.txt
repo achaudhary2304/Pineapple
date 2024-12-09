@@ -1,0 +1,6 @@
+streamlit
+opencv-python-headless
+pandas
+numpy
+sqlite3
+Pillow
