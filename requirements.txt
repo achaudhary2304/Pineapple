@@ -4,3 +4,5 @@ pandas
 numpy
 Pillow
 setuptools
+groq
+paddleocr
