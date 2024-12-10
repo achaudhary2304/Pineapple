@@ -1,0 +1,12 @@
+groq==0.13.0
+inference_sdk==0.29.2
+numpy==1.21.5
+opencv_contrib_python==4.10.0.84
+opencv_python==4.10.0.84
+opencv_python_headless==4.10.0.84
+paddleocr==2.9.1
+paddleocr.egg==info
+pandas==2.2.3
+Pillow==9.0.1
+Pillow==11.0.0
+streamlit==1.40.2
