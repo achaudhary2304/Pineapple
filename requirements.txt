@@ -1,9 +1,9 @@
-groq==0.13.0
-inference_sdk==0.29.2
-numpy==1.26.4
+groq
+inference_sdk
+numpy
 opencv-python-headless
-paddleocr==2.9.1
-paddlepaddle==2.6.0
-pandas==2.2.3
-Pillow==10.0.1
+paddleocr
+paddlepaddle
+pandas
+Pillow
 setuptools
