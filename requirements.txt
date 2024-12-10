@@ -1,3 +1,4 @@
+streamlit
 groq
 inference_sdk
 numpy
