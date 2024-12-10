@@ -1,8 +1,8 @@
 streamlit
+opencv-python-headless
 groq
 inference_sdk
 numpy
-opencv-python-headless
 paddleocr
 paddlepaddle
 pandas
