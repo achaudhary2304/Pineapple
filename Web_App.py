@@ -88,8 +88,14 @@ with st.sidebar:
 os.environ['GROQ_API_KEY'] = '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'
 
 client = Groq()
-ocr = PaddleOCR(use_angle_cls=True, lang='en')
 
+# Initialize PaddleOCR with custom models
+ocr = PaddleOCR(
+    det_model_dir='models/en_PP-OCRv3_det_slim_infer',  # Path to detection model
+    rec_model_dir='models/en_PP-OCRv3_rec_slim_infer',  # Path to recognition model
+    use_angle_cls=True,
+    lang='en'
+)
 def read_text_from_image(image_path):
     try:
         result = ocr.ocr(image_path)
