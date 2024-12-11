@@ -88,14 +88,17 @@ with st.sidebar:
 os.environ['GROQ_API_KEY'] = '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'
 
 client = Groq()
-
+base_path = os.path.dirname(os.path.abspath(__file__))
 # Initialize PaddleOCR with custom models
-ocr = PaddleOCR(
-    det_model_dir='models/en_PP-OCRv3_det_slim_infer',  # Path to detection model
-    rec_model_dir='models/en_PP-OCRv3_rec_slim_infer',  # Path to recognition model
-    use_angle_cls=True,
-    lang='en'
-)
+try:
+    ocr = PaddleOCR(
+        det_model_dir=os.path.join(base_path,'models/en_PP-OCRv3_det_slim_infer'),  # Path to detection model
+        rec_model_dir=os.path.join(base_path,'models/en_PP-OCRv3_rec_slim_infer'),  # Path to recognition model
+        use_angle_cls=os.path.join(base_path,'models/ch_ppocr_mobile_v2.0_cls_slim_infer'),
+        lang='en'
+    )
+except Exception as e:
+    st.error(f"PaddleOCR Initialization Error: {e}")
 def read_text_from_image(image_path):
     try:
         result = ocr.ocr(image_path)
